@@ -1,2 +1,2 @@
-# HouseFinder
-Major Project 
+# HouseFinder-"Discover Nearby Rental Houses"
+Major Project in final semester
