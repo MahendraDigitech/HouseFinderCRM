@@ -9,15 +9,6 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
 
     console.log("Contact Data Recived Successfully");
     console.log(name, email, subject, phone, message);
-  
-    var url = 'https://docs.google.com/forms/d/e/1FAIpQLScgpkTyU9AvhILQCcf6o3eicwL2fbxZArTiQMYIrNNMPcMjLA/formResponse';
-  
-    var formData = new FormData();
-    formData.append('entry.1678590117', name);
-    formData.append('entry.1996300062', email);
-    formData.append('entry.72975923', subject);
-    formData.append('entry.1825055730', phone);
-    formData.append('entry.300178542', message);
 
     var button = document.getElementById('form-submit');
 
