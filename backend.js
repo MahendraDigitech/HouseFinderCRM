@@ -28,11 +28,11 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     const rawData = {
         data: [
             {
-                "Company": name,
-                "Last_Name": subject,
-                "First_Name": message,
-                "Email": email,
-                "Phone": phone,
+                "Company": "name",
+                "Last_Name": "subject",
+                "First_Name": "message",
+                "Email": "emailsghsh@gmail.com",
+                "Phone": "9857485968",
                 "State": 'Madhya Pradesh'
             }
         ],
