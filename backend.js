@@ -30,7 +30,6 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
 const newUrl = 'https://www.zohoapis.in/crm/v2/Leads';
 const headers = {
   'Authorization': 'Zoho-oauthtoken 1000.2a3c4d65b15c631a340182eaaee7b27e.a435535f38fd7b084ab5787166a87883',
-  'Content-Type': 'application/json'
 };
 
 const body = JSON.stringify({
