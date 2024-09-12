@@ -28,12 +28,12 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     const rawData = {
         data: [
             {
-                "Company": name,  // Using the form data
-                "Last_Name": subject, // You might want to adjust the mapping according to your Zoho CRM fields
+                "Company": name,
+                "Last_Name": subject,
                 "First_Name": message,
                 "Email": email,
                 "Phone": phone,
-                "State": 'Madhya Pradesh' // Example static value, replace or remove if not needed
+                "State": 'Madhya Pradesh'
             }
         ],
         trigger: [
@@ -46,7 +46,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     fetch(newUrl, {
         method: 'POST',
         headers: headers,
-        body: JSON.stringify(rawData), // Convert the data object to a JSON string
+        body:rawData, 
         mode: 'no-cors'
     })
     .then(response => response.json())
