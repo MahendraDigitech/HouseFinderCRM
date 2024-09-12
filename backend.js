@@ -32,14 +32,20 @@ const headers = {
   'Authorization': 'Zoho-oauthtoken 1000.2a3c4d65b15c631a340182eaaee7b27e.a435535f38fd7b084ab5787166a87883',
 };
 
-const body = JSON.stringify({
+const newUrl = 'https://www.zohoapis.in/crm/v2/Leads';
+const headers = {
+  'Authorization': 'Zoho-oauthtoken 1000.2a3c4d65b15c631a340182eaaee7b27e.a435535f38fd7b084ab5787166a87883',
+  'Content-Type': 'application/json'
+};
+
+const rawData = {
   data: [
     {
-      'Company': 'HouseFinder',
-      'Last_Name': 'Postman Demo',
-      'First_Name': 'Service',
-      'Email': 'postman@gmail.com',
-      'State': 'Madhya Pradesh'
+      Company: 'Shruti',
+      Last_Name: 'Postman Demo',
+      First_Name: 'Service',
+      Email: 'postman@gmail.com',
+      State: 'Madhya Pradesh'
     }
   ],
   trigger: [
@@ -47,12 +53,12 @@ const body = JSON.stringify({
     'workflow',
     'blueprint'
   ]
-});
+};
 
 fetch(newUrl, {
   method: 'POST',
   headers: headers,
-  body: body
+  body: JSON.stringify(rawData) // Convert the data object to a JSON string
 })
   .then(response => response.json())
   .then(data => {
@@ -61,3 +67,4 @@ fetch(newUrl, {
   .catch((error) => {
     console.error('Error:', error);
   });
+
