@@ -26,14 +26,39 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     setTimeout(function() {
         button.innerHTML = 'Send Message';
     }, 1000);
-  
-    fetch(url, {
-      method: 'POST',
-      body: formData,
-      mode: 'no-cors'
-    }).then(function(response) {
-      console.log('Form data sent successfully');
-    }).catch(function(error) {
-      console.error('Error:', error);
-    });
+
+const newUrl = 'https://www.zohoapis.in/crm/v2/Leads';
+const headers = {
+  'Authorization': 'Zoho-oauthtoken 1000.2a3c4d65b15c631a340182eaaee7b27e.a435535f38fd7b084ab5787166a87883',
+  'Content-Type': 'application/json'
+};
+
+const body = JSON.stringify({
+  data: [
+    {
+      'Company': 'HouseFinder',
+      'Last_Name': 'Postman Demo',
+      'First_Name': 'Service',
+      'Email': 'postman@gmail.com',
+      'State': 'Madhya Pradesh'
+    }
+  ],
+  trigger: [
+    'approval',
+    'workflow',
+    'blueprint'
+  ]
+});
+
+fetch(newUrl, {
+  method: 'POST',
+  headers: headers,
+  body: body
+})
+  .then(response => response.json())
+  .then(data => {
+    console.log('Success:', data);
+  })
+  .catch((error) => {
+    console.error('Error:', error);
   });
