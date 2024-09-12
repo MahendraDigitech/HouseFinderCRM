@@ -32,11 +32,11 @@ const headers = {
 const rawData = {
   data: [
     {
-      Company: 'Shruti',
-      Last_Name: 'Postman Demo',
-      First_Name: 'Service',
-      Email: 'postman@gmail.com',
-      State: 'Madhya Pradesh'
+      "Company": 'Shruti',
+      "Last_Name": 'Postman Demo',
+      "First_Name": 'Service',
+      "Email": 'postman@gmail.com',
+      "State": 'Madhya Pradesh'
     }
   ],
   trigger: [
