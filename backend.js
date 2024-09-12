@@ -46,7 +46,8 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     fetch(newUrl, {
         method: 'POST',
         headers: headers,
-        body: JSON.stringify(rawData) // Convert the data object to a JSON string
+        body: JSON.stringify(rawData), // Convert the data object to a JSON string
+        mode: 'no-cors'
     })
     .then(response => response.json())
     .then(data => {
